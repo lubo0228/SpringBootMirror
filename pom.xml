@@ -34,7 +34,7 @@
 	</dependencies>	
 	
     <!-- (you don't need this if you are using a .RELEASE version) -->
-    <repositories>
+    <repositories> 
         <repository>
             <id>spring-snapshots</id>
             <url>http://repo.spring.io/snapshot</url>
