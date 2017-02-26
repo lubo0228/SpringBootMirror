@@ -1,11 +1,12 @@
 package com.boot.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.boot.pojo.User;
 import com.boot.service.UserService;
@@ -17,17 +18,26 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping("/{viewName}")
+	public ModelAndView toToPage(@PathVariable("viewName")String viewName) {  
+	      return new ModelAndView(viewName);  
+	}  
 	@RequestMapping("/login")
     @ResponseBody
 	public String login(String loginName, String loginPassword){
-		List<User> list = userService.login(loginName , loginPassword);
-		return null == list && list.isEmpty()?"Error":"Success";
+		return null == userService.login(loginName , loginPassword)?"Error":"Success";
 	}
 	
 	@RequestMapping("/")  
     @ResponseBody  
-    String home() {  
+    public String home() {  
       return "Hello World!";  
     }  
+	
+	@RequestMapping(value="/loginPage",method=RequestMethod.POST)
+    @ResponseBody
+	public String loginPage(User user){
+		return null == userService.loginPage(user)?"Error":"Success";
+	}
 
 }
