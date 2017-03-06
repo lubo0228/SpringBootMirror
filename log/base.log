@@ -1,0 +1,141 @@
+2017-03-06 09:56:48,579 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 6296 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 09:56:48,579 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 09:56:48,579 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 09:56:57,151 INFO (StartupInfoLogger.java:57)- Started Application in 9.799 seconds (JVM running for 10.503)
+2017-03-06 09:58:58,453 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 13244 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 09:58:58,456 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 09:58:58,457 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 09:59:05,000 INFO (StartupInfoLogger.java:57)- Started Application in 6.787 seconds (JVM running for 7.195)
+2017-03-06 10:01:31,425 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 13016 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:01:31,428 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:01:31,428 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:01:37,744 INFO (StartupInfoLogger.java:57)- Started Application in 6.563 seconds (JVM running for 6.946)
+2017-03-06 10:04:08,341 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11720 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:04:08,341 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:04:08,341 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:04:14,562 INFO (StartupInfoLogger.java:57)- Started Application in 6.487 seconds (JVM running for 6.846)
+2017-03-06 10:10:02,262 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 12804 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:10:02,262 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:10:02,262 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:10:08,624 INFO (StartupInfoLogger.java:57)- Started Application in 6.596 seconds (JVM running for 6.971)
+2017-03-06 10:15:57,789 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 3232 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:15:57,789 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:15:57,789 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:16:04,310 INFO (StartupInfoLogger.java:57)- Started Application in 6.787 seconds (JVM running for 7.209)
+2017-03-06 10:17:27,419 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 2068 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:17:27,419 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:17:27,419 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:17:34,256 INFO (StartupInfoLogger.java:57)- Started Application in 7.094 seconds (JVM running for 7.766)
+2017-03-06 10:22:03,726 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11592 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:22:03,726 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:22:03,726 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:24:51,803 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 9840 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:24:51,819 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:24:51,819 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:24:58,635 INFO (StartupInfoLogger.java:57)- Started Application in 7.066 seconds (JVM running for 7.441)
+2017-03-06 10:26:28,373 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 5480 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:26:28,373 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:26:28,373 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:26:35,128 INFO (StartupInfoLogger.java:57)- Started Application in 6.99 seconds (JVM running for 7.334)
+2017-03-06 10:30:26,017 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 8308 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:30:26,017 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:30:26,017 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:30:32,749 INFO (StartupInfoLogger.java:57)- Started Application in 6.972 seconds (JVM running for 7.392)
+2017-03-06 10:32:09,137 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 7980 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:32:09,137 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:32:09,137 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:32:15,318 INFO (StartupInfoLogger.java:57)- Started Application in 6.416 seconds (JVM running for 6.805)
+2017-03-06 10:33:05,762 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 260 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:33:05,762 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:33:05,762 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:33:11,784 INFO (StartupInfoLogger.java:57)- Started Application in 6.316 seconds (JVM running for 6.675)
+2017-03-06 10:36:20,420 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11212 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:36:20,420 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:36:20,420 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:36:26,559 INFO (StartupInfoLogger.java:57)- Started Application in 6.373 seconds (JVM running for 6.735)
+2017-03-06 10:42:31,177 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 4768 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:42:31,180 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:42:31,181 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:42:37,583 INFO (StartupInfoLogger.java:57)- Started Application in 6.718 seconds (JVM running for 7.117)
+2017-03-06 10:44:53,636 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 13284 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:44:53,636 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:44:53,636 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:44:59,730 INFO (StartupInfoLogger.java:57)- Started Application in 6.359 seconds (JVM running for 6.719)
+2017-03-06 10:46:08,309 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 7256 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:46:08,309 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:46:08,309 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:46:14,698 INFO (StartupInfoLogger.java:57)- Started Application in 6.623 seconds (JVM running for 6.983)
+2017-03-06 10:48:21,924 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 10196 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:48:21,927 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:48:21,928 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:48:28,592 INFO (StartupInfoLogger.java:57)- Started Application in 6.926 seconds (JVM running for 7.29)
+2017-03-06 10:49:37,862 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 7976 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:49:37,864 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:49:37,864 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:49:44,059 INFO (StartupInfoLogger.java:57)- Started Application in 6.436 seconds (JVM running for 6.818)
+2017-03-06 10:52:31,921 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 6072 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:52:31,923 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:52:31,923 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:52:38,259 INFO (StartupInfoLogger.java:57)- Started Application in 6.582 seconds (JVM running for 6.973)
+2017-03-06 10:58:11,548 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11156 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 10:58:11,550 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 10:58:11,550 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 10:58:18,072 INFO (StartupInfoLogger.java:57)- Started Application in 6.768 seconds (JVM running for 7.134)
+2017-03-06 11:01:49,857 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 8148 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:01:49,859 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:01:49,859 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:01:56,264 INFO (StartupInfoLogger.java:57)- Started Application in 6.649 seconds (JVM running for 7.008)
+2017-03-06 11:03:40,546 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 10652 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:03:40,549 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:03:40,549 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:03:46,915 INFO (StartupInfoLogger.java:57)- Started Application in 6.613 seconds (JVM running for 6.969)
+2017-03-06 11:05:18,468 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 10168 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:05:18,472 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:05:18,473 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:05:25,433 INFO (StartupInfoLogger.java:57)- Started Application in 7.238 seconds (JVM running for 7.71)
+2017-03-06 11:06:23,781 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11604 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:06:23,785 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:06:23,785 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:06:30,323 INFO (StartupInfoLogger.java:57)- Started Application in 6.809 seconds (JVM running for 7.179)
+2017-03-06 11:07:20,020 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 5080 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:07:20,024 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:07:20,024 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:07:26,374 INFO (StartupInfoLogger.java:57)- Started Application in 6.593 seconds (JVM running for 6.957)
+2017-03-06 11:11:54,822 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 10808 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:11:54,826 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:11:54,826 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:12:01,261 INFO (StartupInfoLogger.java:57)- Started Application in 6.685 seconds (JVM running for 7.055)
+2017-03-06 11:27:13,306 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 168 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:27:13,309 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:27:13,309 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:27:19,553 INFO (StartupInfoLogger.java:57)- Started Application in 6.51 seconds (JVM running for 6.877)
+2017-03-06 11:28:18,103 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 7116 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:28:18,105 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:28:18,105 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:28:24,525 INFO (StartupInfoLogger.java:57)- Started Application in 6.671 seconds (JVM running for 7.035)
+2017-03-06 11:28:57,933 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 5312 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:28:57,936 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:28:57,936 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:29:04,396 INFO (StartupInfoLogger.java:57)- Started Application in 6.705 seconds (JVM running for 7.067)
+2017-03-06 11:29:50,977 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 6572 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 11:29:50,981 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 11:29:50,981 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 11:29:57,269 INFO (StartupInfoLogger.java:57)- Started Application in 6.554 seconds (JVM running for 6.921)
+2017-03-06 13:14:18,402 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 7732 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 13:14:18,404 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 13:14:18,404 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 13:14:25,542 INFO (StartupInfoLogger.java:57)- Started Application in 7.379 seconds (JVM running for 7.756)
+2017-03-06 13:19:11,246 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 10076 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 13:19:11,249 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 13:19:11,249 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 13:19:24,320 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11324 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 13:19:24,323 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 13:19:24,323 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 13:20:11,970 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 2044 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 13:20:11,974 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 13:20:11,974 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 13:20:18,507 INFO (StartupInfoLogger.java:57)- Started Application in 6.814 seconds (JVM running for 7.185)
+2017-03-06 13:21:37,883 INFO (StartupInfoLogger.java:48)- Starting Application on DESKTOP-BV9OOD4 with PID 11764 (G:\git\Spring-Boot\target\classes started by admin in G:\git\Spring-Boot)
+2017-03-06 13:21:37,885 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.3.0.BUILD-SNAPSHOT, Spring v4.2.3.RELEASE
+2017-03-06 13:21:37,886 INFO (SpringApplication.java:653)- No profiles are active
+2017-03-06 13:21:44,434 INFO (StartupInfoLogger.java:57)- Started Application in 6.804 seconds (JVM running for 7.232)

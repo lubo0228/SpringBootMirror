@@ -26,10 +26,10 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/{viewName}")
-	public ModelAndView toToPage(@PathVariable("viewName")String viewName) {  
+	public ModelAndView toPage(@PathVariable("viewName")String viewName) {  
 	      return new ModelAndView(viewName);  
 	}  
-	@RequestMapping("/login")
+	@RequestMapping("/login2")
     @ResponseBody
 	public String login(String loginName, String loginPassword){
 		return null == userService.login(loginName , loginPassword)?"Error":"Success";
@@ -41,10 +41,9 @@ public class UserController {
       return "Hello World!";  
     }  
 	
-	@RequestMapping(value="/loginPage",method=RequestMethod.POST)
-    @ResponseBody
+	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String loginPage(User user){
-		return null == userService.loginPage(user)?"Error":"Success";
+		return null == userService.loginPage(user)?"haha":"hehe";
 	}
 	
 	@RequestMapping("/helloHtml")

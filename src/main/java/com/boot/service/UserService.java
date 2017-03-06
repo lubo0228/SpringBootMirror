@@ -22,5 +22,9 @@ public class UserService {
 		return userDao.findByLoginNameAndLoginPassword(user.getLoginName(), user.getLoginPassword());
 	}
 
+	public User findByUsername(String loginName) {
+		return userDao.findByLoginName(loginName);
+	}
+
 	
 }
