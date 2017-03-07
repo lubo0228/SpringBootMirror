@@ -24,7 +24,19 @@ public class User {
     @Column(name="login_password")
     private  String loginPassword;
 
-    public User(){}
+    @NotNull
+    @Column(name="role_name")
+    private String roleName;
+    
+    public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
+
+	public User(){}
 
     public User(String a, String b){
         this.loginName = a;

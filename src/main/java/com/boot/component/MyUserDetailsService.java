@@ -1,8 +1,7 @@
 package com.boot.component;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,9 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.boot.pojo.Role;
 import com.boot.pojo.User;
-import com.boot.service.RoleService;
 import com.boot.service.UserService;
 
 @Component
@@ -22,9 +19,6 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserService userService;
-
-    @Autowired
-    private RoleService roleService;
 
     @Override
     public UserDetails loadUserByUsername(String username) {
@@ -34,11 +28,9 @@ public class MyUserDetailsService implements UserDetailsService {
         	throw new UsernameNotFoundException("用户不存在");
         }
 
-        Set<GrantedAuthority> authorities = new HashSet<>();
-        List<Role> roles = roleService.getRoles(user.getId());
-        for (Role role : roles) {
-        	authorities.add(new SimpleGrantedAuthority(role.getRole()));
-		}
+        List<GrantedAuthority> authorities = new ArrayList<>();
+       
+	    authorities.add(new SimpleGrantedAuthority("ROLE"));
 
         return new org.springframework.security.core.userdetails.User(
                 username, user.getLoginPassword(),
