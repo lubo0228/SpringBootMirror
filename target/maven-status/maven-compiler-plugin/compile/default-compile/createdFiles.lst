@@ -1,5 +1,0 @@
-com\boot\service\UserService.class
-com\boot\controller\UserController.class
-com\boot\pojo\User.class
-com\boot\dao\UserDao.class
-com\boot\Application.class
