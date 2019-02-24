@@ -1,27 +1,27 @@
 <configuration>    
-    <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,,,, -->    
+    <!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,,,, -->
+    <property name="mdc" value="%d{HH:mm:ss.SSS}[%thread][%-5level]%msg ProcessDefinitionId=%X{mdcProcessDefinitionID}
+    executionId=%X{mdcExecutionId} mdcProcessInstanceID=%X{mdcProcessInstanceID} mdcBusinessKey=%X{mdcBusinessKey} %logger{10}.%M:%L%n"/>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">    
         <encoder>    
-            <pattern>%d %p (%file:%line\)- %m%n</pattern>  
-            <charset>GBK</charset>   
+            <pattern>${mdc}</pattern>
+            <charset>UTF-8</charset>
         </encoder>    
     </appender>    
     <appender name="baselog"    
-        class="ch.qos.logback.core.rolling.RollingFileAppender">    
-        <File>log/base.log</File>    
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">    
-            <fileNamePattern>log/base.log.%d.%i</fileNamePattern>    
-            <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">    
-                <!-- or whenever the file size reaches 64 MB -->    
-                <maxFileSize>64 MB</maxFileSize>    
-            </timeBasedFileNamingAndTriggeringPolicy>    
-        </rollingPolicy>    
-        <encoder>    
-            <pattern>    
-                %d %p (%file:%line\)- %m%n  
-            </pattern>    
-            <charset>UTF-8</charset> <!-- 此处设置字符集 -->   
-        </encoder>    
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>log/base.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/base.log.%d.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 64 MB -->
+                <maxFileSize>64 MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${mdc}</pattern>
+            <charset>UTF-8</charset> <!-- 此处设置字符集 -->
+        </encoder>
     </appender>    
     <root level="info">    
         <appender-ref ref="STDOUT" />    
