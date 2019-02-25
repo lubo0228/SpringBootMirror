@@ -4,6 +4,7 @@ import com.boot.component.MDCCommandInvoker;
 import org.activiti.engine.ProcessEngineConfiguration;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration;
+import org.activiti.engine.impl.history.HistoryLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -33,6 +34,9 @@ public class ProcessEngineConfig {
         configuration.setCommandInvoker(commandInvoker);
         configuration.setActivityFontName("宋体");
         configuration.setLabelFontName("宋体");
+//        configuration.setHistory(HistoryLevel.NONE.getKey());
+//        configuration.setHistory(HistoryLevel.ACTIVITY.getKey());
+        configuration.setHistory(HistoryLevel.AUDIT.getKey());
         return configuration;
     }
 }
