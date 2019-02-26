@@ -1,4 +1,4 @@
-package com.boot.component;
+package com.boot.interceptor;
 
 import org.activiti.engine.impl.agenda.AbstractOperation;
 import org.activiti.engine.impl.interceptor.DebugCommandInvoker;

@@ -1,12 +1,17 @@
 package com.boot.config;
 
 import com.boot.Application;
+import com.boot.listener.CustomEventListener;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
+import org.activiti.engine.delegate.event.ActivitiEventType;
+import org.activiti.engine.delegate.event.impl.ActivitiEventImpl;
+import org.activiti.engine.event.EventLogEntry;
 import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.runtime.Execution;
+import org.activiti.engine.runtime.Job;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.junit.Test;
@@ -87,5 +92,68 @@ public class ConfigTest {
             List<HistoricTaskInstance> historicTaskInstanceList = processEngine.getHistoryService().createHistoricTaskInstanceQuery().list();
             LOGGER.info("historicTaskInstanceList.size = {}", historicTaskInstanceList.size());
         }
+    }
+
+    @Test
+    public void testEventLogging() {
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
+        Deployment deployment = processEngine.getRepositoryService()//获取流程定义和部署对象相关的Service
+                .createDeployment()//创建部署对象
+                .addClasspathResource("my-process.bpmn20.xml")
+                .deploy();
+        ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("myProcess");
+        List<EventLogEntry> eventLogEntryList = processEngine.getManagementService().getEventLogEntriesByProcessInstanceId(processInstance.getId());
+        eventLogEntryList.forEach(eventLog -> LOGGER.info("eventLog.type = {},eventLog.data = {}", eventLog.getType(), new String(eventLog.getData())));
+        LOGGER.info("eventLogEntryList.size = {}", eventLogEntryList.size());
+    }
+
+    @Test
+    public void testEventListener() {
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
+        Deployment deployment = processEngine.getRepositoryService()//获取流程定义和部署对象相关的Service
+                .createDeployment()//创建部署对象
+                .addClasspathResource("my-process.bpmn20.xml")
+                .deploy();
+        ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("myProcess");
+        if (processInstance != null) {
+            List<Task> taskList = processEngine.getTaskService().createTaskQuery().list();
+            taskList.forEach(task -> processEngine.getTaskService().complete(task.getId()));
+        }
+        processEngine.getRuntimeService().addEventListener(new CustomEventListener());
+        processEngine.getRuntimeService().dispatchEvent(new ActivitiEventImpl(ActivitiEventType.CUSTOM));
+    }
+
+    @Test
+    public void testInterceptor() {
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
+        Deployment deployment = processEngine.getRepositoryService()//获取流程定义和部署对象相关的Service
+                .createDeployment()//创建部署对象
+                .addClasspathResource("my-process.bpmn20.xml")
+                .deploy();
+        ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("myProcess");
+        if (processInstance != null) {
+            Task task = processEngine.getTaskService().createTaskQuery().singleResult();
+            if (task != null) {
+                processEngine.getTaskService().complete(task.getId());
+            }
+        }
+    }
+
+    @Test
+    public void testJob() {
+        LOGGER.info("start");
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
+        Deployment deployment = processEngine.getRepositoryService()//获取流程定义和部署对象相关的Service
+                .createDeployment()//创建部署对象
+                .addClasspathResource("my-process_job.bpmn20.xml")
+                .deploy();
+        List<Job> jobList = processEngine.getManagementService().createTimerJobQuery().list();
+        LOGGER.info("jobList.size = {}", jobList.size());
+        try {
+            Thread.sleep(1000 * 100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        LOGGER.info("end");
     }
 }
