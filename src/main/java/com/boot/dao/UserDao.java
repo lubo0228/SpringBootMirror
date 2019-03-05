@@ -6,7 +6,7 @@ import com.boot.pojo.User;
 
 public interface UserDao extends JpaRepository<User, Long>{
 
-	public User findByLoginNameAndLoginPassword(String loginName, String loginPassword);
+	User findByLoginNameAndLoginPassword(String loginName, String loginPassword);
 
-	public User findByLoginName(String loginName);
+	User findByLoginName(String loginName);
 }
