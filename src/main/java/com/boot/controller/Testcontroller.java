@@ -1,11 +1,14 @@
 package com.boot.controller;
 
 import com.boot.pojo.User;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
+
+@Api(value = "测试", description = "测试")
 @RestController
 @RequestMapping("test")
 public class Testcontroller {
