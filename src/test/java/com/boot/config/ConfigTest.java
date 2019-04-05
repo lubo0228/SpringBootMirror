@@ -4,6 +4,8 @@ import com.boot.Application;
 import com.boot.listener.CustomEventListener;
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngineConfiguration;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.TaskService;
 import org.activiti.engine.delegate.event.ActivitiEventType;
 import org.activiti.engine.delegate.event.impl.ActivitiEventImpl;
 import org.activiti.engine.event.EventLogEntry;
@@ -132,10 +134,8 @@ public class ConfigTest {
                 .deploy();
         ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey("myProcess");
         if (processInstance != null) {
-            Task task = processEngine.getTaskService().createTaskQuery().singleResult();
-            if (task != null) {
-                processEngine.getTaskService().complete(task.getId());
-            }
+            List<Task> taskList = processEngine.getTaskService().createTaskQuery().list();
+            taskList.forEach(task -> processEngine.getTaskService().complete(task.getId()));
         }
     }
 
@@ -155,5 +155,20 @@ public class ConfigTest {
             e.printStackTrace();
         }
         LOGGER.info("end");
+    }
+
+    @Autowired
+    private RuntimeService runtimeService;
+
+    @Autowired
+    private TaskService taskService;
+
+    @Test
+    @org.activiti.engine.test.Deployment(resources = {"my-process.bpmn20.xml"})
+    public void testSpring() {
+        ProcessEngine processEngine = processEngineConfiguration.buildProcessEngine();
+        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey("myProcess");
+        List<Task> taskList = taskService.createTaskQuery().list();
+        taskList.forEach(task -> processEngine.getTaskService().complete(task.getId()));
     }
 }
