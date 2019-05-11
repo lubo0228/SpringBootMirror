@@ -1,0 +1,108 @@
+server:
+  port: 8088
+#DB Configuration:
+spring:
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/activiti?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: root
+  datasource:
+      type: com.alibaba.druid.pool.xa.DruidXADataSource
+      druid:
+
+        systemDB:
+          name: systemDB
+          url: jdbc:mysql://localhost:3306/system?useUnicode=true&characterEncoding=utf-8
+          username: root
+          password: root
+          # 下面为连接池的补充设置，应用到上面所有数据源中
+          # 初始化大小，最小，最大
+          initialSize: 5
+          minIdle: 5
+          maxActive: 20
+          # 配置获取连接等待超时的时间
+          maxWait: 60000
+          # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+          timeBetweenEvictionRunsMillis: 60000
+          # 配置一个连接在池中最小生存的时间，单位是毫秒
+          minEvictableIdleTimeMillis: 30
+          validationQuery: SELECT 1
+          validationQueryTimeout: 10000
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          # 打开PSCache，并且指定每个连接上PSCache的大小
+          poolPreparedStatements: true
+          maxPoolPreparedStatementPerConnectionSize: 20
+          filters: stat,wall
+          # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+          connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+          # 合并多个DruidDataSource的监控数据
+          useGlobalDataSourceStat: true
+
+        activitiDB:
+          name: activitiDB
+
+          url: jdbc:mysql://localhost:3306/activiti?useUnicode=true&characterEncoding=utf-8
+          username: root
+          password: root
+          # 下面为连接池的补充设置，应用到上面所有数据源中
+          # 初始化大小，最小，最大
+          initialSize: 5
+          minIdle: 5
+          maxActive: 20
+          # 配置获取连接等待超时的时间
+          maxWait: 60000
+          # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+          timeBetweenEvictionRunsMillis: 60000
+          # 配置一个连接在池中最小生存的时间，单位是毫秒
+          minEvictableIdleTimeMillis: 30
+          validationQuery: SELECT 1
+          validationQueryTimeout: 10000
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          # 打开PSCache，并且指定每个连接上PSCache的大小
+          poolPreparedStatements: true
+          maxPoolPreparedStatementPerConnectionSize: 20
+          filters: stat,wall
+          # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+          connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+          # 合并多个DruidDataSource的监控数据
+          useGlobalDataSourceStat: true
+
+  #jta相关参数配置
+  jta:
+    log-dir: classpath:tx-logs
+    transaction-manager-id: txManager
+#JPA Configuration:
+  jpa:
+    database: MySQL
+    show-sql: true
+#    generate-ddl: true
+  activiti:
+    check-process-definitions: false
+#spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+#spring.jpa.database=org.hibernate.dialect.MySQL5InnoDBDialect 
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MYSQL5Dialect
+###THYMELEAF (ThymeleafAutoConfiguration)
+#spring.thymeleaf.prefix=classpath:/templates/  
+#spring.thymeleaf.suffix=.html  
+#spring.thymeleaf.mode=HTML5  
+#spring.thymeleaf.encoding=UTF-8  
+# ;charset=<encoding> is added  
+#spring.thymeleaf.content-type=text/html  
+# set to false for hot refresh  
+#spring.thymeleaf.cache=false
+#freemarker
+#spring.freemarker.cache=false
+#spring.freemarker.charset=UTF-8
+#spring.freemarker.check-template-location=true
+#spring.freemarker.content-type=text/html
+#spring.freemarker.expose-request-attributes=true
+#spring.freemarker.expose-session-attributes=true
+#spring.freemarker.request-context-attribute=request
+#application.message=Hello, GoGo!
+#spring.security.user.name=admin
+#spring.security.user.password=admin

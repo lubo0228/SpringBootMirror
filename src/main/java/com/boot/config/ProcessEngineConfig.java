@@ -7,8 +7,11 @@ import org.activiti.engine.delegate.event.ActivitiEventListener;
 import org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration;
+import org.activiti.spring.SpringProcessEngineConfiguration;
+import org.activiti.spring.boot.AbstractProcessEngineAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -25,20 +28,24 @@ import java.util.concurrent.TimeUnit;
 public class ProcessEngineConfig {
 
     @Autowired
+    @Qualifier("commandInvoker")
     private MDCCommandInvoker commandInvoker;
 
-    @Bean(name = "commandInvoker")
-    public MDCCommandInvoker getCommandInvoker() {
-        return commandInvoker;
-    }
+    @Autowired
+    @Qualifier("activitiDataSource")
+    private AtomikosDataSourceBean dataSource;
+
+    @Autowired
+    private SpringProcessEngineConfiguration configuration;
 
     @Bean(name = "processEngineConfiguration")
-    public ProcessEngineConfiguration setProcessEngineConfiguration(@Qualifier("commandInvoker") MDCCommandInvoker commandInvoker) {
-        ProcessEngineConfigurationImpl configuration = new StandaloneProcessEngineConfiguration();
-        configuration.setJdbcDriver("com.mysql.jdbc.Driver");
-        configuration.setJdbcUrl("jdbc:mysql://localhost:3306/activiti?useUnicode=true&characterEncoding=utf-8");
-        configuration.setJdbcUsername("root");
-        configuration.setJdbcPassword("root");
+    public ProcessEngineConfiguration setProcessEngineConfiguration() {
+//        ProcessEngineConfigurationImpl configuration = new SpringProcessEngineConfiguration();
+//        configuration.setJdbcDriver("com.mysql.jdbc.Driver");
+//        configuration.setJdbcUrl("jdbc:mysql://localhost:3306/activiti?useUnicode=true&characterEncoding=utf-8");
+//        configuration.setJdbcUsername("root");
+//        configuration.setJdbcPassword("root");
+        configuration.setDataSource(dataSource);
 //        configuration.setCommandInvoker(commandInvoker);
         configuration.setActivityFontName("宋体");
         configuration.setLabelFontName("宋体");

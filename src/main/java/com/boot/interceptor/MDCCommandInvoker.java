@@ -3,6 +3,7 @@ package com.boot.interceptor;
 import org.activiti.engine.impl.agenda.AbstractOperation;
 import org.activiti.engine.impl.interceptor.DebugCommandInvoker;
 import org.activiti.engine.logging.LogMDC;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,5 +32,10 @@ public class MDCCommandInvoker extends DebugCommandInvoker {
             //把他的值重新还原一下
             LogMDC.setMDCEnabled(false);
         }
+    }
+
+    @Bean(name = "commandInvoker")
+    public MDCCommandInvoker getCommandInvoker() {
+        return new MDCCommandInvoker();
     }
 }

@@ -1,8 +1,8 @@
-package com.boot.dao;
+package com.boot.dao.system;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.boot.pojo.User;
+import com.boot.pojo.system.User;
 
 public interface UserDao extends JpaRepository<User, Long>{
 

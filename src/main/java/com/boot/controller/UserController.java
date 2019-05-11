@@ -12,7 +12,7 @@
 //import org.springframework.web.bind.annotation.ResponseBody;
 //import org.springframework.web.servlet.ModelAndView;
 //
-//import com.boot.pojo.User;
+//import com.boot.pojo.system.User;
 //import com.boot.service.UserService;
 //
 //
