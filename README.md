@@ -9,3 +9,7 @@ Swagger 前后端必须分离
 Atomikos 一个为Java平台提供增值服务的并且开源类事务管理器
 
 JTA Java Transaction API
+
+lombok
+
+springbatch jdbc
