@@ -12,4 +12,4 @@ JTA Java Transaction API
 
 lombok
 
-springbatch jdbc
+springbatch jdbc quartz

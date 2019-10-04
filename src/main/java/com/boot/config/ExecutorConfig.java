@@ -8,7 +8,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * 配置TaskExecutor
  */
 @Configuration
-public class ExecutorConfiguration {
+public class ExecutorConfig {
 
     @Bean
     public ThreadPoolTaskExecutor threadPoolTaskExecutor() {

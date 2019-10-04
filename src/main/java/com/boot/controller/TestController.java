@@ -52,7 +52,12 @@ public class TestController {
     }
 
     @GetMapping("jta")
-    private void testJta() {
+    public void testJta() {
         userService.testJta();
+    }
+
+    @GetMapping("add")
+    public void add() {
+        userService.saveActivitUser();
     }
 }

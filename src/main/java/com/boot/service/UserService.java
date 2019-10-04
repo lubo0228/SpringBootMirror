@@ -7,41 +7,58 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.UUID;
 
 @Service
-@Transactional(rollbackFor = { java.lang.Exception.class })
+@Transactional(rollbackFor = {java.lang.Exception.class})
 public class UserService {
 
-	@Resource
-	private UserDao userDao;
-	@Resource(name = "userDao-activiti")
-	private com.boot.dao.activiti.UserDao userDaoActiviti;
-	
-	public User login(String loginName, String loginPassword) {
-		return userDao.findByLoginNameAndLoginPassword(loginName, loginPassword);
-	}
+    @Resource
+    private UserDao userDao;
+    @Resource(name = "userDao-activiti")
+    private com.boot.dao.activiti.UserDao userDaoActiviti;
 
-	public User loginPage(User user) {
-		return userDao.findByLoginNameAndLoginPassword(user.getLoginName(), user.getLoginPassword());
-	}
+    public User login(String loginName, String loginPassword) {
+        return userDao.findByLoginNameAndLoginPassword(loginName, loginPassword);
+    }
 
-	public User findByUsername(String loginName) {
-		return userDao.findByLoginName(loginName);
-	}
+    public User loginPage(User user) {
+        return userDao.findByLoginNameAndLoginPassword(user.getLoginName(), user.getLoginPassword());
+    }
 
-	public void testJta(){
-		User system = new User();
-		system.setLoginName("system");
-		system.setLoginPassword("system");
-		system.setRoleName("system");
-		userDao.save(system);
+    public User findByUsername(String loginName) {
+        return userDao.findByLoginName(loginName);
+    }
 
-		int i = 1 / 0;
+    public void testJta() {
+        User system = new User();
+        system.setLoginName("system");
+        system.setLoginPassword("system");
+        system.setRoleName("system");
+        userDao.save(system);
 
-		com.boot.pojo.activiti.User activiti = new com.boot.pojo.activiti.User();
-		activiti.setLoginName("activiti");
-		activiti.setLoginPassword("activiti");
-		activiti.setRoleName("activiti");
-		userDaoActiviti.save(activiti);
-	}
+        int i = 1 / 0;
+
+        com.boot.pojo.activiti.User activiti = new com.boot.pojo.activiti.User();
+        activiti.setLoginName("activiti");
+        activiti.setLoginPassword("activiti");
+        activiti.setRoleName("activiti");
+        userDaoActiviti.save(activiti);
+    }
+
+    public void saveActivitUser() {
+        List<com.boot.pojo.activiti.User> users = new LinkedList<>();
+        for (int i = 0; i < 10000; i++) {
+            com.boot.pojo.activiti.User activiti = new com.boot.pojo.activiti.User();
+            activiti.setLoginName(UUID.randomUUID().toString().substring(0, 4));
+            users.add(activiti);
+            if (users.size() >= 1000) {
+                userDaoActiviti.saveAll(users);
+                users.clear();
+            }
+        }
+
+    }
 }

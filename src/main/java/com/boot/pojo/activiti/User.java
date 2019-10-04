@@ -19,11 +19,11 @@ public class User {
     @Column(name="login_name")
     private  String loginName;
 
-    @NotBlank
+//    @NotBlank
     @Column(name="login_password")
     private  String loginPassword;
 
-    @NotBlank
+//    @NotBlank
     @Column(name="role_name")
     private String roleName;
 }

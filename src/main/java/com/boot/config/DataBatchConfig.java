@@ -3,11 +3,9 @@ package com.boot.config;
 import com.boot.listener.JobListener;
 import com.boot.pojo.activiti.User;
 import com.boot.rowmap.UserRowMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
@@ -15,7 +13,6 @@ import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.database.JdbcCursorItemReader;
-import org.springframework.batch.item.database.support.ListPreparedStatementSetter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -34,10 +31,9 @@ import java.util.List;
  * 配置一个最基本的Job : 一个Job 通常由一个或多个Step组成(基本就像是一个工作流)；
  * 一个Step通常由三部分组成(读入数据 ItemReader，处理数据 ItemProcessor，写入数据 ItemWriter)
  */
+@Slf4j
 @Configuration
-@EnableBatchProcessing
-public class DataBatchConfiguration {
-    private static final Logger log = LoggerFactory.getLogger(DataBatchConfiguration.class);
+public class DataBatchConfig {
 
     @Resource
     private JobBuilderFactory jobBuilderFactory;    //用于构建JOB
@@ -54,10 +50,11 @@ public class DataBatchConfiguration {
     @Autowired
     @Qualifier("activitiDataSource")
     private DataSource activitiDataSource;
+
     /**
      * 一个简单基础的Job通常由一个或者多个Step组成
      */
-    @Bean
+    @Bean("dataHandleJob")
     public Job dataHandleJob() {
         return jobBuilderFactory.get("dataHandleJob").
                 incrementer(new RunIdIncrementer()).
@@ -96,7 +93,7 @@ public class DataBatchConfiguration {
 //            parameters.add("id");
 //            parameters.add("login_name");
             reader.setPreparedStatementSetter(new ArgumentPreparedStatementSetter(parameters.toArray()));
-            reader.setSql("select id, login_name from user");
+            reader.setSql("select id, login_name from user limit 1000");
             reader.setRowMapper(new UserRowMapper());
             reader.afterPropertiesSet();
             //所有ItemReader和ItemWriter实现都会在ExecutionContext提交之前将其当前状态存储在其中,如果不希望这样做,可以设置setSaveState(false)
@@ -109,6 +106,7 @@ public class DataBatchConfiguration {
 
     @Bean
     public ItemProcessor<User, User> getDataProcessor() {
+        log.info("getDataProcessor");
 //        return new ItemProcessor<User, User>() {
 //            @Override
 //            public User process(User User) throws Exception {
@@ -125,6 +123,7 @@ public class DataBatchConfiguration {
 
     @Bean
     public ItemWriter<User> getDataWriter() {
+        log.info("getDataWriter");
         return list -> {
             for (User User : list) {
                 log.info("write data : " + User); //模拟 假装写数据 ,这里写真正写入数据的逻辑
