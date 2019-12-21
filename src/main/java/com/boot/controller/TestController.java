@@ -60,4 +60,9 @@ public class TestController {
     public void add() {
         userService.saveActivitUser();
     }
+
+    @GetMapping("null")
+    public User testNull(Long id) {
+        return userService.testNull(id);
+    }
 }

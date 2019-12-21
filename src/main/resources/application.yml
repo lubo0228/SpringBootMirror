@@ -1,5 +1,7 @@
 server:
   port: 8088
+  servlet:
+    context-path: /boot
 #DB Configuration:
 spring:
 #  datasource:
@@ -136,3 +138,9 @@ spring:
 #application.message=Hello, GoGo!
 #spring.security.user.name=admin
 #spring.security.user.password=admin
+
+#mybatis plus 设置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

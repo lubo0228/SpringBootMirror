@@ -1,9 +1,10 @@
 package com.boot.service;
 
 import com.boot.dao.system.UserDao;
+import com.boot.mapper.system.UserMapper;
 import com.boot.pojo.system.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -19,6 +20,8 @@ public class UserService {
     private UserDao userDao;
     @Resource(name = "userDao-activiti")
     private com.boot.dao.activiti.UserDao userDaoActiviti;
+    @Autowired
+    private UserMapper userMapper;
 
     public User login(String loginName, String loginPassword) {
         return userDao.findByLoginNameAndLoginPassword(loginName, loginPassword);
@@ -60,5 +63,11 @@ public class UserService {
             }
         }
 
+    }
+
+    public User testNull(Long id) {
+        User system = new User();
+        system.setId(id);
+        return userMapper.find(system);
     }
 }
