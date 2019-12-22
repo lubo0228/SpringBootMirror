@@ -70,4 +70,8 @@ public class UserService {
         system.setId(id);
         return userMapper.find(system);
     }
+
+    public void save(User user) {
+        userDao.save(user);
+    }
 }

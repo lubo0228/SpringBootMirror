@@ -1,16 +1,14 @@
 package com.boot.config;
 
-import com.atomikos.icatch.jta.UserTransactionImp;
-import com.atomikos.icatch.jta.UserTransactionManager;
 import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
-import org.springframework.transaction.jta.JtaTransactionManager;
 
 import javax.sql.DataSource;
-import javax.transaction.UserTransaction;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Properties;
 
 @Configuration
@@ -61,6 +59,10 @@ public class DBConfig {
                 env.getProperty(prefix + "timeBetweenEvictionRunsMillis", Integer.class));
         prop.put("minEvictableIdleTimeMillis", env.getProperty(prefix + "minEvictableIdleTimeMillis", Integer.class));
         prop.put("filters", env.getProperty(prefix + "filters"));
+        //初始化druid数据源时，添加下面的配置，以保证连接mysql时，客户端的字符集被指定为utf8mb4
+        List<String> connectionInitSqls = new LinkedList<>();
+        connectionInitSqls.add("set names utf8mb4;");
+        prop.put("connectionInitSqls", connectionInitSqls);
         return prop;
     }
 

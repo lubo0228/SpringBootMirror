@@ -65,4 +65,10 @@ public class TestController {
     public User testNull(Long id) {
         return userService.testNull(id);
     }
+
+    @GetMapping("save")
+    public void save(User user) {
+        userService.save(user);
+        System.out.println("success");
+    }
 }
