@@ -1,6 +1,7 @@
 package com.boot.controller;
 
 import com.boot.pojo.system.User;
+import com.boot.result.ResponseResult;
 import com.boot.service.UserService;
 import io.swagger.annotations.Api;
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(value = "测试", description = "测试")
 @RestController
 @RequestMapping("test")
+@ResponseResult
 public class TestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TestController.class);
