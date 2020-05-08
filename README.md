@@ -13,3 +13,5 @@ JTA Java Transaction API
 lombok
 
 springbatch jdbc quartz
+
+图片转文本 https://www.degraeve.com/img2txt.php
